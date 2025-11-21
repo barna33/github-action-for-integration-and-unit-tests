@@ -24,5 +24,7 @@ jobs:
           pip install pytest
 
       - name: Run unit + integration tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
           pytest tests/unit tests/integration
