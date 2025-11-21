@@ -22,7 +22,8 @@ def test_total_price_calculates_correctly():
     cart.add_item("Apple", 1.0, quantity=2)   # 2.0
     cart.add_item("Banana", 0.5, quantity=3)  # 1.5
 
-    assert cart.total_price() == 3.5
+    # SZÁNDÉKOSAN ROSSZ EXPECTATION!
+    assert cart.total_price() == 999
 
 
 def test_apply_discount_valid_range():
